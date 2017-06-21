@@ -7,7 +7,9 @@ import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#router}}
 import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/router}}
-
+{{#vuex}}
+import store from './store'
+{{/vuex}}
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 /* eslint-disable no-new */
