@@ -19,7 +19,7 @@
     {{/axios}}
     {{#fontAwesome}}
     "font-awesome": "^4.7.0",
-    {{#fontAwesome}}
+    {{/fontAwesome}}
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "vue": "^2.3.3"{{#router}},
