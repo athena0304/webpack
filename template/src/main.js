@@ -10,7 +10,16 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#vuex}}
 import store from './store'
 {{/vuex}}
+{{#axios}}
+import ajax from './api/ajax.js'
+Vue.prototype.ajax = ajax;
+{{/axios}}
+
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+
+{{#fontAwesome}}
+import 'font-awesome/css/font-awesome.css'
+{{/fontAwesome}}
 
 /* eslint-disable no-new */
 new Vue({

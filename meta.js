@@ -48,6 +48,14 @@ module.exports = {
       "type": "confirm",
       "message": "Install vuex?"
     },
+    "axios": {
+      "type": "confirm",
+      "message": "Install axios?"
+    },
+    "fontAwesome": {
+      "type": "confirm",
+      "message": "Install font-awesome?"
+    },
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"

@@ -1,21 +1,19 @@
 <template>
   <div class="hello">
     <h1>\{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2>font-awesome-test <i class="fa fa-thumbs-up" aria-hidden="true"></i></h2>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <li><a href="https://cn.vuejs.org/" target="_blank">vuejs中文文档</a></li>
       <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
+      <li><a href="https://athena0304.gitbooks.io/vue-template-webpack-cn/content/" target="_blank">webpack模板的中文文档</a></li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2>生态</h2>
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+      <li><a href="http://element.eleme.io/#/zh-CN" target="_blank">element-ui</a></li>
     </ul>
   </div>
 </template>
@@ -25,9 +23,23 @@ export default {
   name: 'hello',
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
-      msg: 'Welcome to Your Vue.js App'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      msg: '欢迎使用定制vue-webpack模板'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  },
+  mounted() {
+    {{#axios}}
+    this.ajax.testWeather({
+      cb(data) {
+        console.log(data)
+      },
+      params: {
+        appkey: "0148609f14a96369",
+        city: "北京"
+      }
+    })
+    {{/axios}}
+  }
+  {{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
     {{#router}}
     <router-view></router-view>
     {{else}}
